@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Point of Sale System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>POS System</h1>
+
+  <section id="inventory-section">
+    <h2>Add Inventory Item</h2>
+    <input type="text" id="item-name" placeholder="Item Name">
+    <input type="number" id="base-price" placeholder="Base Price">
+    <input type="number" id="profit-margin" placeholder="Profit %">
+    <input type="text" id="upc" placeholder="UPC Code">
+    <button onclick="addInventory()">Add Item</button>
+  </section>
+
+  <section id="inventory-list">
+    <h2>Inventory</h2>
+    <ul id="inventory"></ul>
+  </section>
+
+  <section id="cart-section">
+    <h2>Cart</h2>
+    <ul id="cart"></ul>
+    <p>Total: $<span id="total">0.00</span></p>
+    <button onclick="checkout()">Check Out</button>
+  </section>
+  <section id="sales-dashboard">
+  <h2>Sales Dashboard</h2>
+  <button onclick="showSales('daily')">Daily Sales</button>
+  <button onclick="showSales('weekly')">Weekly Sales</button>
+  <button onclick="showSales('monthly')">Monthly Sales</button>
+  <p id="sales-summary"></p>
+  <p><strong>Top Item Sold:</strong> <span id="top-item">N/A</span></p>
+</section>
+  <script src="script.js"></script>
+</body>
+</html>
